@@ -71,6 +71,8 @@
                 ultimoResultado.textContent = 'Errado!';
                 ultimoResultado.stylebackground = 'red';
                 if(palpiteUsuario < numeroAleatorio) {
+                    baixoOualto.textContent = 'Seu palpite está muito baixo!';
+                } else if(palpiteUsuario > numeroAleatorio) {
                     baixoOualto.textContent = 'Seu palpite está muito alto!';
                 }
             }
@@ -79,6 +81,8 @@
         campoPalpite.focus();
         
         }
+
+        envioPalpite.addEventListener('click', conferirPalpite);
 
     </script>
 
